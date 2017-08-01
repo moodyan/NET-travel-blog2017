@@ -13,13 +13,12 @@ namespace TravelBlog.Models
         public Person()
         {
             this.Experience = new HashSet<Experience>();
-            this.Location = new HashSet<Location>();
+            
         }
         [Key]
         public int PersonId { get; set; }
         public string Name { get; set; }
         public string Bio { get; set; }
         public virtual ICollection<Experience> Experience { get; set; }
-        public virtual ICollection<Location> Location { get; set; }
     }
 }

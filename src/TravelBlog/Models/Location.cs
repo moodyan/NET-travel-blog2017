@@ -10,6 +10,10 @@ namespace TravelBlog.Models
     [Table("Locations")]
     public class Location
     {
+        public Location()
+        {
+            this.Experience = new HashSet<Experience>();
+        }
         [Key]
         public int LocationId { get; set; }
         public string Name { get; set; }
@@ -19,9 +23,7 @@ namespace TravelBlog.Models
         public string Language { get; set; }
         public string Population { get; set; }
         public string Image { get; set; }
-        public int ExperienceId { get; set; }
-        public int PersonID { get; set; }
-        public virtual Experience Experience { get; set; }
-        public virtual Person Person { get; set; }
+        public virtual ICollection<Experience> Experience { get; set; }
+
     }
 }

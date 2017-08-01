@@ -1,0 +1,29 @@
+﻿@model TravelBlog.Models.Location
+
+@{
+    ViewData["Title"] = @Html.DisplayFor(model => model.Name);
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Create</h2>
+<hr />
+<h4>Add a new Location</h4>
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Name)
+    @Html.TextBoxFor(model => model.Name)
+    @Html.LabelFor(model => model.FlavorText)
+    @Html.TextBoxFor(model => model.FlavorText)
+    @Html.LabelFor(model => model.Region)
+    @Html.TextBoxFor(model => model.Region)
+    @Html.LabelFor(model => model.Language)
+    @Html.TextBoxFor(model => model.Language)
+    @Html.LabelFor(model => model.Currency)
+    @Html.TextBoxFor(model => model.Currency)
+    @Html.LabelFor(model => model.Population)
+    @Html.TextBoxFor(model => model.Population)
+    @Html.LabelFor(model => model.Image)
+    @Html.TextBoxFor(model => model.Image)
+
+    <input type="submit" value="Create" />
+}
+<p>@Html.ActionLink("Back to list", "Index")</p>

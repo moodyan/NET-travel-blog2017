@@ -46,7 +46,7 @@ namespace TravelBlog
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Location}/{action=Index}/{id?}");
             });
 
             app.Run(async (context) =>

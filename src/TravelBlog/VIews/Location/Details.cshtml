@@ -1,0 +1,27 @@
+﻿@model TravelBlog.Models.Location
+@{
+    ViewData["Title"] = @Html.DisplayFor(model => model.Name);
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h2>@Html.DisplayFor(model => model.Name)</h2>
+    <p>@Html.DisplayFor(model => model.Region)</p>
+    <hr />
+    <p>@Html.DisplayFor(model => model.FlavorText)</p>
+    <p>@Html.DisplayNameFor(model => model.Language): @Html.DisplayFor(model => model.Language)</p>
+    <p>@Html.DisplayNameFor(model => model.Population): @Html.DisplayFor(model => model.Population)</p>
+    <p>@Html.DisplayNameFor(model => model.Currency): @Html.DisplayFor(model => model.Currency)</p>
+    <br />
+   <h2> @Html.DisplayNameFor(model => model.Experience): </h2>
+
+    @foreach(var experience in ViewBag.Experiences)
+    {
+        <p>@Html.Raw(experience.Title)</p>
+
+    }
+
+    <p>@Html.ActionLink("Back To Location List", "Index")</p>
+</div>
+
+
