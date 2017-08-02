@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace TravelBlog.Models
 {
     public class TravelBlogContext: DbContext
@@ -12,6 +13,7 @@ namespace TravelBlog.Models
         public DbSet<Location> Locations { get; set; }
         public DbSet<Experience> Experiences { get; set; }
         public DbSet<Person> People { get; set; }
+        public DbSet<Region> Regions { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             options.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=TravelBlog;integrated security=True");

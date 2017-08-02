@@ -1,4 +1,20 @@
-﻿.cards {
+﻿.jumbotron{
+    background: url("https://inst.eecs.berkeley.edu/~cs194-26/fa14/upload/files/proj3/cs194-di/proj3_sutardja_anthony/imgs/earth_road_joined/road.png");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    height: 450px;
+    padding-top: 0px;
+}
+
+.jumbotron h2{
+    font-size: 100px;
+    color: white;
+    padding-top: 70px;
+    font-weight: bold;
+}
+
+.cards {
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
@@ -8,6 +24,7 @@
     margin: 10px;
     border: 1px solid #ccc;
     box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+    background-color: white;
   } 
   .card img {
     max-width: 100%;
@@ -15,10 +32,35 @@
   .card .text {
     padding: 0 20px 20px;
   }
-  .card .text > button {
-    background: gray;
+  /*.card .text > button {
+    background-color: tomato;
     border: 0;
     color: white;
     padding: 10px;
     width: 100%;
-    }
+    }*/
+  .card button {
+      background-color: tomato;
+      border: 0;
+      padding: 10px;
+      width: 100%;
+  }
+
+  .card button a {
+      color:white;
+  }
+
+  .card button:hover, .card button:hover a {
+      background-color: #ffbf47;
+      color: white;
+  }
+
+  .navbar {
+    
+      margin-top: 0;
+      
+  }
+
+  .navbar-default {
+      background-color: transparent;
+  }

@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Experiences";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model IEnumerable<TravelBlog.Models.Experience>
+<h2>Experiences</h2>
+
+
+<main class="cards">
+    @foreach (var listExperience in Model)
+    {
+        <article class="card">
+            <img src=@Html.DisplayFor(image => listExperience.Image) alt="Sample photo">
+            <div class="text">
+                <h3>@Html.DisplayFor(name => listExperience.Title)</h3>
+                <h3>@Html.DisplayFor(location => listExperience.Location.Name)</h3>
+                <p>@Html.ActionLink("Delete", "Delete", new { id = listExperience.ExperienceId })</p>
+                <p>@Html.ActionLink("Edit", "Edit", new { id = listExperience.ExperienceId })</p>
+                <button>@Html.ActionLink("Learn More", "Details", new { id = listExperience.ExperienceId })</button>
+            </div>
+        </article>
+    }
+</main>
+@Html.ActionLink("Create New", "Create")

@@ -7,11 +7,14 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using TravelBlog.Models;
 
+
 namespace TravelBlog.Controllers
 {
     public class LocationController : Controller
     {
         private TravelBlogContext db = new TravelBlogContext();
+
+
         //View list of locations
         public IActionResult Index()
         {
@@ -21,11 +24,12 @@ namespace TravelBlog.Controllers
         public IActionResult Details(int id)
         {
             var thisLocation = db.Locations.FirstOrDefault(location => location.LocationId == id);
-
+             
             try
             {
                 var experiences = db.Experiences
-                    .Where(experience => experience.LocationId == id).ToList();
+                   .Where(experience => experience.LocationId == id).ToList();
+               
                 ViewBag.Experiences = experiences;
                 return View(thisLocation);
             }
@@ -34,6 +38,7 @@ namespace TravelBlog.Controllers
                 Console.WriteLine(ex);
                 return View(thisLocation);
             }
+           
         }
         //Create new Location
         public IActionResult Create()
@@ -53,8 +58,6 @@ namespace TravelBlog.Controllers
         public IActionResult Edit(int id)
         {
             var thisLocation = db.Locations.FirstOrDefault(location => location.LocationId == id);
-            ViewBag.ExperienceId = new SelectList(db.Experiences, "ExperienceId", "Title");
-            ViewBag.PersonId = new SelectList(db.People, "PersonId", "Name");
             return View(thisLocation);
         }
 

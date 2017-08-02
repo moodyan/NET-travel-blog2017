@@ -6,7 +6,7 @@
 
 <div class="container">
     <h2>@Html.DisplayFor(model => model.Name)</h2>
-    <p>@Html.DisplayFor(model => model.Region)</p>
+    @*<p>@Html.DisplayFor(model => model.Region)</p>*@
     <hr />
     <p>@Html.DisplayFor(model => model.FlavorText)</p>
     <p>@Html.DisplayNameFor(model => model.Language): @Html.DisplayFor(model => model.Language)</p>
@@ -15,11 +15,21 @@
     <br />
    <h2> @Html.DisplayNameFor(model => model.Experience): </h2>
 
-    @foreach(var experience in ViewBag.Experiences)
+    <main class="cards">
+    @foreach (var experience in ViewBag.Experiences)
     {
-        <p>@Html.Raw(experience.Title)</p>
+           
+        <article class="card">
+            <img src=@Html.Raw(experience.Image) alt="Sample photo">
+            <div class="text">
+                <h3>@Html.Raw(experience.Title)</h3>
+                             
+                <button>@Html.ActionLink("Learn More", "Details", "Experience", new { id = experience.ExperienceId })</button>
+            </div>
+        </article>
 
     }
+    </main>
 
     <p>@Html.ActionLink("Back To Location List", "Index")</p>
 </div>

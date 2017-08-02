@@ -3,7 +3,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @model IEnumerable<TravelBlog.Models.Location>
-<h2>Location</h2>
+<h2>Locations</h2>
 
 
 <main class="cards">
@@ -15,6 +15,7 @@
                 <h3>@Html.DisplayFor(name => listLocation.Name)</h3>
                 <p>@Html.DisplayFor(text => listLocation.FlavorText)</p>
                 <p>@Html.ActionLink("Delete", "Delete", new { id = listLocation.LocationId })</p>
+                <p>@Html.ActionLink("Edit", "Edit", new { id = listLocation.LocationId })</p>
                 <button>@Html.ActionLink("Learn More", "Details", new { id = listLocation.LocationId })</button>
             </div>
         </article>

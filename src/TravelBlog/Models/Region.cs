@@ -7,19 +7,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TravelBlog.Models
 {
-    [Table("Experiences")]
-    public class Experience
+    [Table("Regions")]
+    public class Region
     {
-        
+
         [Key]
-        public int ExperienceId { get; set; }
-        public string Title { get; set; }
-        public string Eat { get; set; }
-        public string Drink { get; set; }
-        public string See { get; set; }
-        public string Image { get; set; }
+        public int RegionId { get; set; }
+        public string Name { get; set; }
         public int LocationId { get; set; }
         public virtual Location Location { get; set; }
-       
     }
 }
