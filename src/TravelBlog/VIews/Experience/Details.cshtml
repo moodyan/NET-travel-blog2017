@@ -13,4 +13,13 @@
     <br />  
     <p>@Html.ActionLink("View All " + (string)ViewBag.Location + " Experiences", "Details", "Location", new {id = ViewBag.LocationId })</p>
 </div>
+
+<br />
+<h3>Comments for the '@Html.DisplayFor(model => model.Title)' Experience</h3>
+@foreach (var comment in Model.Comments)
+{
+    <p>@comment.CommentBody</p>
+
+}
+<br />
 <button>@Html.ActionLink("Add Comment", "Create", "Comment", new { id = Model.ExperienceId })</button>

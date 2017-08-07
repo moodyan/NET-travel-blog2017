@@ -18,7 +18,8 @@ namespace TravelBlog.Controllers
         }
         public IActionResult Details(int id)
         {
-            var thisExperience = db.Experiences.FirstOrDefault(something => something.ExperienceId == id);
+            var thisExperience = db.Experiences.Include(experience => experience.Comments).FirstOrDefault(something => something.ExperienceId == id);
+
             var foundLocation = db.Locations.FirstOrDefault(something => something.LocationId == thisExperience.LocationId);
             ViewBag.Location = foundLocation.Name;
             ViewBag.LocationId = thisExperience.LocationId;
