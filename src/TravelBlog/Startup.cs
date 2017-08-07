@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using TravelBlog.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace TravelBlog
 {
@@ -31,6 +32,9 @@ namespace TravelBlog
             services.AddEntityFramework()
                 .AddDbContext<TravelBlogContext>(options =>
                     options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]));
+            services.AddIdentity<ApplicationUser, IdentityRole>()
+                .AddEntityFrameworkStores<TravelBlogContext>()
+                .AddDefaultTokenProviders();
         }
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
@@ -41,12 +45,13 @@ namespace TravelBlog
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseIdentity();
             app.UseStaticFiles();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Location}/{action=Index}/{id?}");
+                    template: "{controller=Account}/{action=Index}/{id?}");
             });
 
             app.Run(async (context) =>

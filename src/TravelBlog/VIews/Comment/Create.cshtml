@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model TravelBlog.Models.Comment
+
+<h2>Add a new task</h2>
+<hr />
+@using (Html.BeginForm())
+{
+
+    @Html.LabelFor(model => model.CommentBody)
+    @Html.EditorFor(model => model.CommentBody)
+
+    <input type="submit" value="Create" />
+}
+@Html.ActionLink("Back to Experience", "Index", "Experience")

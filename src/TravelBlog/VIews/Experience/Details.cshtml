@@ -13,4 +13,4 @@
     <br />  
     <p>@Html.ActionLink("View All " + (string)ViewBag.Location + " Experiences", "Details", "Location", new {id = ViewBag.LocationId })</p>
 </div>
-
+<button>@Html.ActionLink("Add Comment", "Create", "Comment", new { id = Model.ExperienceId })</button>

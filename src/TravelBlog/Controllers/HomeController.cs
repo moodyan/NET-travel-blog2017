@@ -14,7 +14,7 @@ namespace TravelBlog.Controllers
        private TravelBlogContext db = new TravelBlogContext();
        public IActionResult Index()
        {
-           return View(db.Locations.ToList());
+           return View();
        }
     }
 }

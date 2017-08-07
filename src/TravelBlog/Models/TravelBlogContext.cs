@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+
 
 
 namespace TravelBlog.Models
 {
-    public class TravelBlogContext: DbContext
+    public class TravelBlogContext: IdentityDbContext<ApplicationUser>
     {
         public TravelBlogContext() { }
         public DbSet<Location> Locations { get; set; }
@@ -18,8 +20,7 @@ namespace TravelBlog.Models
         {
             options.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=TravelBlog;integrated security=True");
         }
-        public TravelBlogContext(DbContextOptions<TravelBlogContext> options)
-            : base(options)
+        public TravelBlogContext(DbContextOptions options) : base(options)
         {
         }
 
@@ -27,5 +28,6 @@ namespace TravelBlog.Models
         {
             base.OnModelCreating(builder);
         }
+        public DbSet<Comment> Comments { get; set; }
     }
 }
