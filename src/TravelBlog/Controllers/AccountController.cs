@@ -22,6 +22,13 @@ namespace TravelBlog.Controllers
             _db = db;
         }
 
+        //public AccountController() { }
+
+        public UserManager<ApplicationUser> GetUser()
+        {
+            return _userManager;
+        }
+
         public IActionResult Index()
         {
             return View();

@@ -1,51 +1,52 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Http;
 using TravelBlog.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.AspNetCore.Identity;
-using System.Threading.Tasks;
 
 namespace TravelBlog.Controllers
 {
+
     public class RoleController : Controller
     {
         private readonly TravelBlogContext _db;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
-
         public RoleController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, TravelBlogContext db)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _db = db;
         }
-
-        private TravelBlogContext db = new TravelBlogContext();
         public IActionResult Index()
         {
-            var roles = db.Roles.ToList();
+            var roles = _db.Roles.ToList();
             return View(roles);
         }
-
-        public IActionResult Create()
+        public ActionResult Create()
         {
             return View();
         }
 
+        //
+        // POST: /Roles/Create
         [HttpPost]
-        public IActionResult Create(string RoleName)
+        public ActionResult Create(string RoleName)
         {
             try
             {
-                db.Roles.Add(new IdentityRole()
+                _db.Roles.Add(new IdentityRole()
                 {
-                    Name = RoleName
+                    Name = RoleName,
+                    NormalizedName = RoleName.ToUpper()
                 });
-                db.SaveChanges();
+                _db.SaveChanges();
                 ViewBag.ResultMessage = "Role created successfully !";
                 return RedirectToAction("Index");
             }
@@ -54,31 +55,24 @@ namespace TravelBlog.Controllers
                 return View();
             }
         }
-
-        public IActionResult Delete(string RoleName)
+        public ActionResult Edit(string RoleName)
         {
             var thisRole = _db.Roles.FirstOrDefault(r => r.Name == RoleName);
-            _db.Roles.Remove(thisRole);
-            _db.SaveChanges();
-            return RedirectToAction("Index");
-        }
-
-        public ActionResult Edit(string roleId)
-        {
-            var thisRole = _db.Roles.FirstOrDefault(r => r.Id == roleId);
 
             return View(thisRole);
         }
-
-        [HttpPost]
+        
+        // POST: /Roles/Edit/5
+        [HttpPost, ActionName("Edit")]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(IdentityRole role)
+        public ActionResult EditRole(IdentityRole role)
         {
             try
             {
                 var thisRole = _db.Roles.FirstOrDefault(r => r.Id == role.Id);
                 thisRole.Name = role.Name;
-                _db.Entry(thisRole).State = EntityState.Modified;
+                thisRole.NormalizedName = role.Name.ToUpper();
+                //_db.Entry(thisRole).State = EntityState.Modified;// useless thing
                 _db.SaveChanges();
 
                 return RedirectToAction("Index");
@@ -89,34 +83,99 @@ namespace TravelBlog.Controllers
             }
         }
 
-        public ActionResult ManageUserRoles()
+        // POST: /Roles/Edit/5
+        public ActionResult Delete(string RoleName)
         {
-            var list = db.Roles.OrderBy(r => r.Name).ToList().Select(rr => new SelectListItem { Value = rr.Name.ToString(), Text = rr.Name }).ToList();
+            var thisRole = _db.Roles.FirstOrDefault(r => r.Name == RoleName);
+            _db.Roles.Remove(thisRole);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult ManageUserRoles()
+        {
+            // prepopulat roles for the view dropdown
+            var users = _db.Users.OrderBy(u => u.UserName).ToList().Select(uu => new SelectListItem { Value = uu.UserName.ToString(), Text = uu.UserName }).ToList();
+            var list = _db.Roles.OrderBy(r => r.Name).ToList().Select(rr => new SelectListItem { Value = rr.Name.ToString(), Text = rr.Name }).ToList();
             ViewBag.Roles = list;
+            ViewBag.UserName = users;
             return View();
         }
 
-        //   [HttpPost]
-        //   [ValidateAntiForgeryToken]
-        //   public Task<IActionResult> RoleAddToUser(string UserName, string RoleName)
-        //   {
-        //    try
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> RoleAddToUser(string UserName, string Roles)
+        {
+
+            ApplicationUser user = _db.Users.FirstOrDefault(u => u.UserName == UserName);
+            await _userManager.AddToRoleAsync(user, Roles);
+
+            ViewBag.ResultMessage = "Role created successfully !";
+
+            // prepopulat roles for the view dropdown
+            var users = _db.Users.OrderBy(u => u.UserName).ToList().Select(uu => new SelectListItem { Value = uu.UserName.ToString(), Text = uu.UserName }).ToList();
+            var list = _db.Roles.OrderBy(r => r.Name).ToList().Select(rr => new SelectListItem { Value = rr.Name.ToString(), Text = rr.Name }).ToList();
+            ViewBag.Roles = list;
+            ViewBag.UserName = users;
+
+            return View("ManageUserRoles");
+        }
+
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult GetRoles(string UserName)
+        //{
+        //    if (!string.IsNullOrWhiteSpace(UserName))
         //    {
         //        ApplicationUser user = _db.Users.FirstOrDefault(u => u.UserName == UserName);
-        //        var task = await _userManager.AddToRoleAsync(user, RoleId);
+        //        var roles = _db.Roles.Include(ru => ru.Id == _db.UserRoles.Where(u => u.UserId == user.Id).ToList();
+        //        ViewBag.RolesForThisUser = roles;
 
+        //        // prepopulat roles for the view dropdown
+        //        var users = _db.Users.OrderBy(u => u.UserName).ToList().Select(uu => new SelectListItem { Value = uu.UserName.ToString(), Text = uu.UserName }).ToList();
+        //        var list = _db.Roles.OrderBy(r => r.Name).ToList().Select(rr => new SelectListItem { Value = rr.Name.ToString(), Text = rr.Name }).ToList();
+        //        ViewBag.Roles = list;
+        //        ViewBag.UserName = users;
         //    }
-        //    catch (Exception ex)
-        //    {
-        //        return View();
-        //    }
-        //    ViewBag.ResultMessage = "Role created successfully !";
-
-        //    // prepopulat roles for the view dropdown
-        //    var list = _db.Roles.OrderBy(r => r.Name).ToList().Select(rr => new SelectListItem { Value = rr.Id.ToString(), Text = rr.Name }).ToList();
-        //    ViewBag.Roles = list;
 
         //    return View("ManageUserRoles");
         //}
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> GetRoles(string UserName)
+        {
+            if (!string.IsNullOrWhiteSpace(UserName))
+            {
+                ApplicationUser user = await _userManager.FindByNameAsync(UserName);
+                ViewBag.RolesForThisUser = await _userManager.GetRolesAsync(user);
+                var users = _db.Users.OrderBy(u => u.UserName).ToList().Select(uu => new SelectListItem { Value = uu.UserName.ToString(), Text = uu.UserName }).ToList();
+                var list = _db.Roles.OrderBy(r => r.Name).ToList().Select(rr => new SelectListItem { Value = rr.Name.ToString(), Text = rr.Name }).ToList();
+                ViewBag.Roles = list;
+                ViewBag.UserName = users;
+            }
+            return View("ManageUserRoles");
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteRoleForUser(string UserName, string Roles)
+        {
+            ApplicationUser user = await _userManager.FindByNameAsync(UserName);
+
+            if (await _userManager.IsInRoleAsync(user, Roles))
+            {
+                await _userManager.RemoveFromRoleAsync(user, Roles);
+            }
+            else
+            {
+                ViewBag.ResultMessage = "This user doesn't have that role.";
+            }
+            var users = _db.Users.OrderBy(u => u.UserName).ToList().Select(uu => new SelectListItem { Value = uu.UserName.ToString(), Text = uu.UserName }).ToList();
+            var list = _db.Roles.OrderBy(r => r.Name).ToList().Select(rr => new SelectListItem { Value = rr.Name.ToString(), Text = rr.Name }).ToList();
+            ViewBag.Roles = list;
+            ViewBag.UserName = users;
+
+            return View("ManageUserRoles");
+        }
     }
 }

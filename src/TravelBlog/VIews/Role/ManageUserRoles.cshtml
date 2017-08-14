@@ -9,14 +9,14 @@
 
 <h2>Role Add to User</h2>
 
-@using (Html.BeginForm("RoleAddToUser", "Roles"))
+@using (Html.BeginForm("RoleAddToUser", "Role"))
 {
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
 
     <p>
-        Username : @Html.TextBox("UserName")
-        Role Name: @Html.DropDownList("RoleName", (IEnumerable<SelectListItem>)ViewBag.Roles, "Select ...")
+        Username : @Html.DropDownList("UserName", "Select ...")
+        Role Name: @Html.DropDownList("Roles", "Select ...")
 
     </p>
 
@@ -24,11 +24,11 @@
 }
 <hr />
 <h3>Get Roles for a User</h3>
-@using (Html.BeginForm("GetRoles", "Roles"))
+@using (Html.BeginForm("GetRoles", "Role"))
 {
     @Html.AntiForgeryToken()
     <p>
-        Username : @Html.TextBox("UserName")
+        Username : @Html.TextBox("UserName", "")
         <input type="submit" value="Get Roles for this User" />
     </p>
 }
@@ -49,14 +49,14 @@
 <hr />
 <h3>Delete A User from a Role</h3>
 
-@using (Html.BeginForm("DeleteRoleForUser", "Roles"))
+@using (Html.BeginForm("DeleteRoleForUser", "Role"))
 {
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
 
     <p>
-        Username : @Html.TextBox("UserName")
-        Role Name: @Html.DropDownList("RoleName", (IEnumerable<SelectListItem>)ViewBag.Roles, "Select ...")
+        Username : @Html.TextBox("UserName", "")
+        Role Name: @Html.DropDownList("Roles", "Select ...")
 
     </p>
 

@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v1.0/",
-    "signature": "ef388cbc2bff0134a2130b80fd5b0543d451acc8"
+    "signature": "9dbd7a036af0835976a77b62b1eaa3401f645034"
   },
   "compilationOptions": {
     "defines": [
@@ -18,29 +18,36 @@
         "dependencies": {
           "Microsoft.NETCore.App": "1.0.1",
           "Microsoft.AspNetCore.Diagnostics": "1.0.0",
-          "Microsoft.AspNetCore.Mvc": "1.0.0",
           "Microsoft.AspNetCore.Server.IISIntegration": "1.0.0",
           "Microsoft.AspNetCore.Server.Kestrel": "1.0.1",
           "Microsoft.Extensions.Logging.Console": "1.0.0",
+          "Microsoft.AspNetCore.Mvc": "1.0.0",
           "Microsoft.EntityFrameworkCore": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "1.0.0",
           "Microsoft.Extensions.Configuration.FileExtensions": "1.0.0",
           "Microsoft.Extensions.Configuration.Json": "1.0.0",
+          "bootstrap": "3.3.7",
           "Microsoft.AspNetCore.StaticFiles": "1.0.0",
+          "Microsoft.AspNetCore.Identity": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "1.0.0",
-          "Microsoft.AspNetCore.Mvc.Core": "1.0.1",
-          "Microsoft.AspNetCore.Mvc.ViewFeatures": "1.0.1"
+          "Microsoft.EntityFrameworkCore.Design": "1.0.0-preview2-final"
         },
         "compile": {
           "TravelBlog.dll": {}
         }
       },
+      "bootstrap/3.3.7": {
+        "dependencies": {
+          "jQuery": "1.9.1"
+        }
+      },
+      "jQuery/1.9.1": {},
       "Libuv/1.9.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.0.1"
         }
       },
-      "Microsoft.AspNetCore.Antiforgery/1.0.1": {
+      "Microsoft.AspNetCore.Antiforgery/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.DataProtection": "1.0.0",
           "Microsoft.AspNetCore.Http.Abstractions": "1.0.0",
@@ -354,12 +361,12 @@
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.ApiExplorer": "1.0.0",
           "Microsoft.AspNetCore.Mvc.Cors": "1.0.0",
-          "Microsoft.AspNetCore.Mvc.DataAnnotations": "1.0.1",
-          "Microsoft.AspNetCore.Mvc.Formatters.Json": "1.0.1",
+          "Microsoft.AspNetCore.Mvc.DataAnnotations": "1.0.0",
+          "Microsoft.AspNetCore.Mvc.Formatters.Json": "1.0.0",
           "Microsoft.AspNetCore.Mvc.Localization": "1.0.0",
           "Microsoft.AspNetCore.Mvc.Razor": "1.0.0",
           "Microsoft.AspNetCore.Mvc.TagHelpers": "1.0.0",
-          "Microsoft.AspNetCore.Mvc.ViewFeatures": "1.0.1",
+          "Microsoft.AspNetCore.Mvc.ViewFeatures": "1.0.0",
           "Microsoft.Extensions.Caching.Memory": "1.0.0",
           "Microsoft.Extensions.DependencyInjection": "1.0.0"
         },
@@ -367,7 +374,7 @@
           "lib/netstandard1.6/Microsoft.AspNetCore.Mvc.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Mvc.Abstractions/1.0.1": {
+      "Microsoft.AspNetCore.Mvc.Abstractions/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Routing.Abstractions": "1.0.0",
           "Microsoft.CSharp": "4.0.1",
@@ -382,18 +389,18 @@
       },
       "Microsoft.AspNetCore.Mvc.ApiExplorer/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Mvc.Core": "1.0.1"
+          "Microsoft.AspNetCore.Mvc.Core": "1.0.0"
         },
         "compile": {
           "lib/netstandard1.6/Microsoft.AspNetCore.Mvc.ApiExplorer.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Mvc.Core/1.0.1": {
+      "Microsoft.AspNetCore.Mvc.Core/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Authorization": "1.0.0",
           "Microsoft.AspNetCore.Hosting.Abstractions": "1.0.0",
           "Microsoft.AspNetCore.Http": "1.0.0",
-          "Microsoft.AspNetCore.Mvc.Abstractions": "1.0.1",
+          "Microsoft.AspNetCore.Mvc.Abstractions": "1.0.0",
           "Microsoft.AspNetCore.Routing": "1.0.0",
           "Microsoft.Extensions.DependencyModel": "1.0.0",
           "Microsoft.Extensions.FileProviders.Abstractions": "1.0.0",
@@ -410,15 +417,15 @@
       "Microsoft.AspNetCore.Mvc.Cors/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Cors": "1.0.0",
-          "Microsoft.AspNetCore.Mvc.Core": "1.0.1"
+          "Microsoft.AspNetCore.Mvc.Core": "1.0.0"
         },
         "compile": {
           "lib/netstandard1.6/Microsoft.AspNetCore.Mvc.Cors.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Mvc.DataAnnotations/1.0.1": {
+      "Microsoft.AspNetCore.Mvc.DataAnnotations/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Mvc.Core": "1.0.1",
+          "Microsoft.AspNetCore.Mvc.Core": "1.0.0",
           "Microsoft.Extensions.Localization": "1.0.0",
           "System.ComponentModel.Annotations": "4.1.0"
         },
@@ -426,10 +433,10 @@
           "lib/netstandard1.6/Microsoft.AspNetCore.Mvc.DataAnnotations.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Mvc.Formatters.Json/1.0.1": {
+      "Microsoft.AspNetCore.Mvc.Formatters.Json/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.JsonPatch": "1.0.0",
-          "Microsoft.AspNetCore.Mvc.Core": "1.0.1"
+          "Microsoft.AspNetCore.Mvc.Core": "1.0.0"
         },
         "compile": {
           "lib/netstandard1.6/Microsoft.AspNetCore.Mvc.Formatters.Json.dll": {}
@@ -449,7 +456,7 @@
       "Microsoft.AspNetCore.Mvc.Razor/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.Razor.Host": "1.0.0",
-          "Microsoft.AspNetCore.Mvc.ViewFeatures": "1.0.1",
+          "Microsoft.AspNetCore.Mvc.ViewFeatures": "1.0.0",
           "Microsoft.CodeAnalysis.CSharp": "1.3.0",
           "Microsoft.Extensions.FileProviders.Composite": "1.0.0",
           "System.Runtime.Loader": "4.0.0",
@@ -484,14 +491,14 @@
           "lib/netstandard1.6/Microsoft.AspNetCore.Mvc.TagHelpers.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Mvc.ViewFeatures/1.0.1": {
+      "Microsoft.AspNetCore.Mvc.ViewFeatures/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Antiforgery": "1.0.1",
+          "Microsoft.AspNetCore.Antiforgery": "1.0.0",
           "Microsoft.AspNetCore.Diagnostics.Abstractions": "1.0.0",
           "Microsoft.AspNetCore.Html.Abstractions": "1.0.0",
-          "Microsoft.AspNetCore.Mvc.Core": "1.0.1",
-          "Microsoft.AspNetCore.Mvc.DataAnnotations": "1.0.1",
-          "Microsoft.AspNetCore.Mvc.Formatters.Json": "1.0.1",
+          "Microsoft.AspNetCore.Mvc.Core": "1.0.0",
+          "Microsoft.AspNetCore.Mvc.DataAnnotations": "1.0.0",
+          "Microsoft.AspNetCore.Mvc.Formatters.Json": "1.0.0",
           "Microsoft.Extensions.WebEncoders": "1.0.0",
           "Newtonsoft.Json": "9.0.1",
           "System.Buffers": "4.0.0",
@@ -740,6 +747,29 @@
           "lib/netstandard1.3/Microsoft.EntityFrameworkCore.dll": {}
         }
       },
+      "Microsoft.EntityFrameworkCore.Design/1.0.0-preview2-final": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design.Core": "1.0.0-preview2-final",
+          "Microsoft.Extensions.CommandLineUtils": "1.0.0",
+          "Microsoft.NETCore.App": "1.0.1"
+        },
+        "compile": {
+          "lib/netcoreapp1.0/Microsoft.EntityFrameworkCore.Design.dll": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Design.Core/1.0.0-preview2-final": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Hosting.Abstractions": "1.0.0",
+          "Microsoft.EntityFrameworkCore.Relational.Design": "1.0.0",
+          "System.AppContext": "4.1.0",
+          "System.Collections.NonGeneric": "4.0.1",
+          "System.IO": "4.1.0",
+          "System.IO.FileSystem": "4.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Design.Core.dll": {}
+        }
+      },
       "Microsoft.EntityFrameworkCore.Relational/1.0.0": {
         "dependencies": {
           "Microsoft.CSharp": "4.0.1",
@@ -750,6 +780,14 @@
         },
         "compile": {
           "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.dll": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Relational.Design/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Relational": "1.0.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.Design.dll": {}
         }
       },
       "Microsoft.EntityFrameworkCore.SqlServer/1.0.0": {
@@ -783,6 +821,18 @@
         },
         "compile": {
           "lib/netstandard1.3/Microsoft.Extensions.Caching.Memory.dll": {}
+        }
+      },
+      "Microsoft.Extensions.CommandLineUtils/1.0.0": {
+        "dependencies": {
+          "System.Collections": "4.0.11",
+          "System.Console": "4.0.0",
+          "System.IO": "4.1.0",
+          "System.Linq": "4.1.0",
+          "System.Resources.ResourceManager": "4.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.Extensions.CommandLineUtils.dll": {}
         }
       },
       "Microsoft.Extensions.Configuration/1.0.0": {
@@ -2744,29 +2794,36 @@
         "dependencies": {
           "Microsoft.NETCore.App": "1.0.1",
           "Microsoft.AspNetCore.Diagnostics": "1.0.0",
-          "Microsoft.AspNetCore.Mvc": "1.0.0",
           "Microsoft.AspNetCore.Server.IISIntegration": "1.0.0",
           "Microsoft.AspNetCore.Server.Kestrel": "1.0.1",
           "Microsoft.Extensions.Logging.Console": "1.0.0",
+          "Microsoft.AspNetCore.Mvc": "1.0.0",
           "Microsoft.EntityFrameworkCore": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "1.0.0",
           "Microsoft.Extensions.Configuration.FileExtensions": "1.0.0",
           "Microsoft.Extensions.Configuration.Json": "1.0.0",
+          "bootstrap": "3.3.7",
           "Microsoft.AspNetCore.StaticFiles": "1.0.0",
+          "Microsoft.AspNetCore.Identity": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "1.0.0",
-          "Microsoft.AspNetCore.Mvc.Core": "1.0.1",
-          "Microsoft.AspNetCore.Mvc.ViewFeatures": "1.0.1"
+          "Microsoft.EntityFrameworkCore.Design": "1.0.0-preview2-final"
         },
         "runtime": {
           "TravelBlog.dll": {}
         }
       },
+      "bootstrap/3.3.7": {
+        "dependencies": {
+          "jQuery": "1.9.1"
+        }
+      },
+      "jQuery/1.9.1": {},
       "Libuv/1.9.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.0.1"
         }
       },
-      "Microsoft.AspNetCore.Antiforgery/1.0.1": {
+      "Microsoft.AspNetCore.Antiforgery/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.DataProtection": "1.0.0",
           "Microsoft.AspNetCore.Http.Abstractions": "1.0.0",
@@ -3080,12 +3137,12 @@
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.ApiExplorer": "1.0.0",
           "Microsoft.AspNetCore.Mvc.Cors": "1.0.0",
-          "Microsoft.AspNetCore.Mvc.DataAnnotations": "1.0.1",
-          "Microsoft.AspNetCore.Mvc.Formatters.Json": "1.0.1",
+          "Microsoft.AspNetCore.Mvc.DataAnnotations": "1.0.0",
+          "Microsoft.AspNetCore.Mvc.Formatters.Json": "1.0.0",
           "Microsoft.AspNetCore.Mvc.Localization": "1.0.0",
           "Microsoft.AspNetCore.Mvc.Razor": "1.0.0",
           "Microsoft.AspNetCore.Mvc.TagHelpers": "1.0.0",
-          "Microsoft.AspNetCore.Mvc.ViewFeatures": "1.0.1",
+          "Microsoft.AspNetCore.Mvc.ViewFeatures": "1.0.0",
           "Microsoft.Extensions.Caching.Memory": "1.0.0",
           "Microsoft.Extensions.DependencyInjection": "1.0.0"
         },
@@ -3093,7 +3150,7 @@
           "lib/netstandard1.6/Microsoft.AspNetCore.Mvc.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Mvc.Abstractions/1.0.1": {
+      "Microsoft.AspNetCore.Mvc.Abstractions/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Routing.Abstractions": "1.0.0",
           "Microsoft.CSharp": "4.0.1",
@@ -3108,18 +3165,18 @@
       },
       "Microsoft.AspNetCore.Mvc.ApiExplorer/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Mvc.Core": "1.0.1"
+          "Microsoft.AspNetCore.Mvc.Core": "1.0.0"
         },
         "runtime": {
           "lib/netstandard1.6/Microsoft.AspNetCore.Mvc.ApiExplorer.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Mvc.Core/1.0.1": {
+      "Microsoft.AspNetCore.Mvc.Core/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Authorization": "1.0.0",
           "Microsoft.AspNetCore.Hosting.Abstractions": "1.0.0",
           "Microsoft.AspNetCore.Http": "1.0.0",
-          "Microsoft.AspNetCore.Mvc.Abstractions": "1.0.1",
+          "Microsoft.AspNetCore.Mvc.Abstractions": "1.0.0",
           "Microsoft.AspNetCore.Routing": "1.0.0",
           "Microsoft.Extensions.DependencyModel": "1.0.0",
           "Microsoft.Extensions.FileProviders.Abstractions": "1.0.0",
@@ -3136,15 +3193,15 @@
       "Microsoft.AspNetCore.Mvc.Cors/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Cors": "1.0.0",
-          "Microsoft.AspNetCore.Mvc.Core": "1.0.1"
+          "Microsoft.AspNetCore.Mvc.Core": "1.0.0"
         },
         "runtime": {
           "lib/netstandard1.6/Microsoft.AspNetCore.Mvc.Cors.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Mvc.DataAnnotations/1.0.1": {
+      "Microsoft.AspNetCore.Mvc.DataAnnotations/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Mvc.Core": "1.0.1",
+          "Microsoft.AspNetCore.Mvc.Core": "1.0.0",
           "Microsoft.Extensions.Localization": "1.0.0",
           "System.ComponentModel.Annotations": "4.1.0"
         },
@@ -3152,10 +3209,10 @@
           "lib/netstandard1.6/Microsoft.AspNetCore.Mvc.DataAnnotations.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Mvc.Formatters.Json/1.0.1": {
+      "Microsoft.AspNetCore.Mvc.Formatters.Json/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.JsonPatch": "1.0.0",
-          "Microsoft.AspNetCore.Mvc.Core": "1.0.1"
+          "Microsoft.AspNetCore.Mvc.Core": "1.0.0"
         },
         "runtime": {
           "lib/netstandard1.6/Microsoft.AspNetCore.Mvc.Formatters.Json.dll": {}
@@ -3175,7 +3232,7 @@
       "Microsoft.AspNetCore.Mvc.Razor/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.Razor.Host": "1.0.0",
-          "Microsoft.AspNetCore.Mvc.ViewFeatures": "1.0.1",
+          "Microsoft.AspNetCore.Mvc.ViewFeatures": "1.0.0",
           "Microsoft.CodeAnalysis.CSharp": "1.3.0",
           "Microsoft.Extensions.FileProviders.Composite": "1.0.0",
           "System.Runtime.Loader": "4.0.0",
@@ -3210,14 +3267,14 @@
           "lib/netstandard1.6/Microsoft.AspNetCore.Mvc.TagHelpers.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Mvc.ViewFeatures/1.0.1": {
+      "Microsoft.AspNetCore.Mvc.ViewFeatures/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Antiforgery": "1.0.1",
+          "Microsoft.AspNetCore.Antiforgery": "1.0.0",
           "Microsoft.AspNetCore.Diagnostics.Abstractions": "1.0.0",
           "Microsoft.AspNetCore.Html.Abstractions": "1.0.0",
-          "Microsoft.AspNetCore.Mvc.Core": "1.0.1",
-          "Microsoft.AspNetCore.Mvc.DataAnnotations": "1.0.1",
-          "Microsoft.AspNetCore.Mvc.Formatters.Json": "1.0.1",
+          "Microsoft.AspNetCore.Mvc.Core": "1.0.0",
+          "Microsoft.AspNetCore.Mvc.DataAnnotations": "1.0.0",
+          "Microsoft.AspNetCore.Mvc.Formatters.Json": "1.0.0",
           "Microsoft.Extensions.WebEncoders": "1.0.0",
           "Newtonsoft.Json": "9.0.1",
           "System.Buffers": "4.0.0",
@@ -3469,6 +3526,29 @@
           "lib/netstandard1.3/Microsoft.EntityFrameworkCore.dll": {}
         }
       },
+      "Microsoft.EntityFrameworkCore.Design/1.0.0-preview2-final": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design.Core": "1.0.0-preview2-final",
+          "Microsoft.Extensions.CommandLineUtils": "1.0.0",
+          "Microsoft.NETCore.App": "1.0.1"
+        },
+        "runtime": {
+          "lib/netcoreapp1.0/Microsoft.EntityFrameworkCore.Design.dll": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Design.Core/1.0.0-preview2-final": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Hosting.Abstractions": "1.0.0",
+          "Microsoft.EntityFrameworkCore.Relational.Design": "1.0.0",
+          "System.AppContext": "4.1.0",
+          "System.Collections.NonGeneric": "4.0.1",
+          "System.IO": "4.1.0",
+          "System.IO.FileSystem": "4.0.1"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Design.Core.dll": {}
+        }
+      },
       "Microsoft.EntityFrameworkCore.Relational/1.0.0": {
         "dependencies": {
           "Microsoft.CSharp": "4.0.1",
@@ -3479,6 +3559,14 @@
         },
         "runtime": {
           "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.dll": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.Relational.Design/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Relational": "1.0.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.EntityFrameworkCore.Relational.Design.dll": {}
         }
       },
       "Microsoft.EntityFrameworkCore.SqlServer/1.0.0": {
@@ -3512,6 +3600,18 @@
         },
         "runtime": {
           "lib/netstandard1.3/Microsoft.Extensions.Caching.Memory.dll": {}
+        }
+      },
+      "Microsoft.Extensions.CommandLineUtils/1.0.0": {
+        "dependencies": {
+          "System.Collections": "4.0.11",
+          "System.Console": "4.0.0",
+          "System.IO": "4.1.0",
+          "System.Linq": "4.1.0",
+          "System.Resources.ResourceManager": "4.0.1"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.Extensions.CommandLineUtils.dll": {}
         }
       },
       "Microsoft.Extensions.Configuration/1.0.0": {
@@ -5379,15 +5479,25 @@
       "serviceable": false,
       "sha512": ""
     },
+    "bootstrap/3.3.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3YTWhPNh6UcnUvzw9u6A2/hy2w0h4lznxPbX6FY47lFia3+Ib4zBixTpW6YieYA/b2fLXbkjoD59OjcVF3cJXw=="
+    },
+    "jQuery/1.9.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HiX9icLyiJGgiL5EOIn0d1MBPHVV2M9mzWT4mANdniDNR51RvAFTyKEXEd2+5yQJ4PJ5xePOR61Vjj/omQzYcw=="
+    },
     "Libuv/1.9.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-9Q7AaqtQhS8JDSIvRBt6ODSLWDBI4c8YxNxyCQemWebBFUtBbc6M5Vi5Gz1ZyIUlTW3rZK9bIr5gnVyv0z7a2Q=="
     },
-    "Microsoft.AspNetCore.Antiforgery/1.0.1": {
+    "Microsoft.AspNetCore.Antiforgery/1.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-MMevi8HnI5GxtNOS9ZqZLuNafltbngXsOrNqyykFveMWFN5a3AfAB7I0qU77tBS9B/N3boRQuyT9AR0BsCQbaw=="
+      "sha512": "sha512-oJnrSvL6S7jM2eD/TR/Kyp/7O6pKvN+8FcnYvUaxaHbKlISwl98o44uidzePBjGxTf4fh9NFEx/q3OuuxAvBzw=="
     },
     "Microsoft.AspNetCore.Authentication/1.0.0": {
       "type": "package",
@@ -5509,35 +5619,35 @@
       "serviceable": true,
       "sha512": "sha512-nNiMnzdXHpMrsjnBRiYaVy5EMsCmTsqSIIOtJvMbqJldh1i3NCM9jgvp4Da+Ke1gkGd2/MK8rXp+8a5yF+QOOQ=="
     },
-    "Microsoft.AspNetCore.Mvc.Abstractions/1.0.1": {
+    "Microsoft.AspNetCore.Mvc.Abstractions/1.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Xa9XOA/NEIGSUSyAtc0rQrTRJKcxN8rzvBy0QJn2tRAXVeXc0Lbx4/1ia9kxyn3ygbjhF6bO90ZnC3Z3a2cq5g=="
+      "sha512": "sha512-d7KEexDwxSwVeZv+SDbsMRPl2WuKMVckOCp/KTGuI1NJhd/7GvNGW101iRIC3tC/yym0PaajcWwTZNVfjhyoJw=="
     },
     "Microsoft.AspNetCore.Mvc.ApiExplorer/1.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-46aWHLmZ37c44bJzLdbSEmIxCwQo7BljHBoK8C9CPCEPOLPWmg0XyPhGyMSGY4woDmm9ukBOEpqT899BWSxhRw=="
     },
-    "Microsoft.AspNetCore.Mvc.Core/1.0.1": {
+    "Microsoft.AspNetCore.Mvc.Core/1.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-TfUFH0HYbL3DCGkWE24gUDnHoa3pCr4b6xbUiQTnqIbIXdL79qW8mTtfD+RHmAN5bsf1J1fndJJ84/jKri+kiw=="
+      "sha512": "sha512-tjCOZJheOAKStHs4LIcrLsbF/00wEwSinC+vCFpsmdqGVl3/tX9jnID20E1NlkKOW68DOLBavoC23BWFiHa0JA=="
     },
     "Microsoft.AspNetCore.Mvc.Cors/1.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-jz3au6mm/O0ahotfUqZTGtsftcd4UYKIzl2l0+WRG817UJdMGLmnmgmUPcAQR1nrI0Dg49MsfTkjWoMQM9CsUw=="
     },
-    "Microsoft.AspNetCore.Mvc.DataAnnotations/1.0.1": {
+    "Microsoft.AspNetCore.Mvc.DataAnnotations/1.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-y3QkHvOI+vopfhncU9NpUH2MvtZ2Z0EfnApb92jqbmfWL1wd5Np3SHrFSXgI4zVLlM38dMa/QU2SYM3e4T7fFQ=="
+      "sha512": "sha512-ZU02Y2tnKu/lVv2ywnNO+nSRzDWiTlq+ZhSuR9L3Q9NqlCyQJXOgX+iD/BGshnMQ7ZTstjyO4h8WeF7Ii9vBWQ=="
     },
-    "Microsoft.AspNetCore.Mvc.Formatters.Json/1.0.1": {
+    "Microsoft.AspNetCore.Mvc.Formatters.Json/1.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-wM12hSUlF0Eqed44psOYT4fY/RRjMx049A4bBUfqiGr1UFU54zTR8djRLW0dIp1w7Xv5WQ/bgG9jyqiaRbv6jg=="
+      "sha512": "sha512-XQQLbxYLmdRj2U685NxFIrxVxqsXHLO5zN4ZIhTQ23VxzI6Qk2WN9ska0tl4ZMDV/4pSyE8SlmNeKPCN3pW86w=="
     },
     "Microsoft.AspNetCore.Mvc.Localization/1.0.0": {
       "type": "package",
@@ -5559,10 +5669,10 @@
       "serviceable": true,
       "sha512": "sha512-5IT4kddg3Tz3Ki53HvP3fvjnpYzKjY5mFWhmpPQvE2vzfMr7zU6X1Cls2SnJPMcV6sAqzTB4j6AmUmcEpFNMqg=="
     },
-    "Microsoft.AspNetCore.Mvc.ViewFeatures/1.0.1": {
+    "Microsoft.AspNetCore.Mvc.ViewFeatures/1.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-1zGeF76JEqvocxdM+H5n/vJunUUVNzKK4LmgnaFdrrCDTrI6MVdok+8TBBUbeI+uNk3ssrLnP3EcHIdvxl66gw=="
+      "sha512": "sha512-DNMCqY+TX5jgO3M1C7Lf5E61llWZ+QgtjLYfrIkq7yfZjhzI52nprFE3mh66HahKU1EvyOz9+ISdaSmTimfNbQ=="
     },
     "Microsoft.AspNetCore.Razor/1.0.0": {
       "type": "package",
@@ -5639,10 +5749,25 @@
       "serviceable": true,
       "sha512": "sha512-Vqg/v0cXRQZQH0gY3VHHqt0Bt5WZEkDReVpI1sNYKHVbVtnMYFKPp5SiNygosUJYrJk1rSGb8UVkplDNNUkEgg=="
     },
+    "Microsoft.EntityFrameworkCore.Design/1.0.0-preview2-final": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RhyjntECuOVsrKjgFog9rv+V7oBsxBNxz5NviF7uHvDDQXLyHH3os/CewQxRNsve114AQH5RX/Bww6qAXlSORQ=="
+    },
+    "Microsoft.EntityFrameworkCore.Design.Core/1.0.0-preview2-final": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-H3pHksGErQSEwWyvISlDYMslIXftS4XB2m0AvqBS08ECGHagh27mqm/oIyUetzzRad+C2V0zpguJmR14eMiRaA=="
+    },
     "Microsoft.EntityFrameworkCore.Relational/1.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-LGBab+7o0eq4C3YtvkAxK8W7Ia57eO0Ue0viQgt0STptQ2bUpLzV7q5LfbNl475rt6yTWa/vDQlYVaI64fwqdw=="
+    },
+    "Microsoft.EntityFrameworkCore.Relational.Design/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pw4EmGTp5U645is0Lyf0C6yU1uQGHVIZiRyxlDNNrRllL0ZjSFKTShv9qbE+fBpvvvArNp2HhDmP7d6vJAt0Dw=="
     },
     "Microsoft.EntityFrameworkCore.SqlServer/1.0.0": {
       "type": "package",
@@ -5658,6 +5783,11 @@
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-6+7zTufCnZ+tfrUo7RbIRR3LB0BxwOwxfXuo0IbLyIvgoToGpWuz5wYEDfCYNOvpig9tY8FA0I1uRHYmITMXMQ=="
+    },
+    "Microsoft.Extensions.CommandLineUtils/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kXJ8+YvEjp1j7ezJ7yvQMLYbRL6QlpBUjRoBfqghoe80yqZ5azYB90lL4iNeyRCznWF+cGm41aaIoFU0aOq7TQ=="
     },
     "Microsoft.Extensions.Configuration/1.0.0": {
       "type": "package",
