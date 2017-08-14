@@ -15,6 +15,8 @@ namespace TravelBlog.Models
         public string Author { get; set; }
         public string Place { get; set; }
         public string Description { get; set; }
+        public bool Visited { get; set; }
+        public int Votes { get; set; }
 
         public override bool Equals(System.Object otherSuggestion)
         {

@@ -16,6 +16,7 @@ namespace TravelBlog.Models
         public DbSet<Experience> Experiences { get; set; }
         public DbSet<Person> People { get; set; }
         public DbSet<Region> Regions { get; set; }
+        public DbSet<Comment> Comments { get; set; }
         public virtual DbSet<Suggestion> Suggestions { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
@@ -29,6 +30,5 @@ namespace TravelBlog.Models
         {
             base.OnModelCreating(builder);
         }
-        public DbSet<Comment> Comments { get; set; }
     }
 }

@@ -13,7 +13,7 @@
 --version:1.0.0.0
 --informational-version:1.0.0
 --target-framework:.NETCoreApp,Version=v1.0
---reference:C:\Users\epicodus\.nuget\packages\Microsoft.AspNetCore.Antiforgery\1.0.0\lib\netstandard1.3\Microsoft.AspNetCore.Antiforgery.dll
+--reference:C:\Users\epicodus\.nuget\packages\Microsoft.AspNetCore.Antiforgery\1.0.1\lib\netstandard1.3\Microsoft.AspNetCore.Antiforgery.dll
 --reference:C:\Users\epicodus\.nuget\packages\Microsoft.AspNetCore.Authentication\1.0.0\lib\netstandard1.3\Microsoft.AspNetCore.Authentication.dll
 --reference:C:\Users\epicodus\.nuget\packages\Microsoft.AspNetCore.Authentication.Cookies\1.0.0\lib\netstandard1.3\Microsoft.AspNetCore.Authentication.Cookies.dll
 --reference:C:\Users\epicodus\.nuget\packages\Microsoft.AspNetCore.Authorization\1.0.0\lib\netstandard1.3\Microsoft.AspNetCore.Authorization.dll
@@ -42,13 +42,13 @@
 --reference:C:\Users\epicodus\.nuget\packages\Microsoft.AspNetCore.Mvc.ApiExplorer\1.0.0\lib\netstandard1.6\Microsoft.AspNetCore.Mvc.ApiExplorer.dll
 --reference:C:\Users\epicodus\.nuget\packages\Microsoft.AspNetCore.Mvc.Core\1.0.1\lib\netstandard1.6\Microsoft.AspNetCore.Mvc.Core.dll
 --reference:C:\Users\epicodus\.nuget\packages\Microsoft.AspNetCore.Mvc.Cors\1.0.0\lib\netstandard1.6\Microsoft.AspNetCore.Mvc.Cors.dll
---reference:C:\Users\epicodus\.nuget\packages\Microsoft.AspNetCore.Mvc.DataAnnotations\1.0.0\lib\netstandard1.6\Microsoft.AspNetCore.Mvc.DataAnnotations.dll
---reference:C:\Users\epicodus\.nuget\packages\Microsoft.AspNetCore.Mvc.Formatters.Json\1.0.0\lib\netstandard1.6\Microsoft.AspNetCore.Mvc.Formatters.Json.dll
+--reference:C:\Users\epicodus\.nuget\packages\Microsoft.AspNetCore.Mvc.DataAnnotations\1.0.1\lib\netstandard1.6\Microsoft.AspNetCore.Mvc.DataAnnotations.dll
+--reference:C:\Users\epicodus\.nuget\packages\Microsoft.AspNetCore.Mvc.Formatters.Json\1.0.1\lib\netstandard1.6\Microsoft.AspNetCore.Mvc.Formatters.Json.dll
 --reference:C:\Users\epicodus\.nuget\packages\Microsoft.AspNetCore.Mvc.Localization\1.0.0\lib\netstandard1.6\Microsoft.AspNetCore.Mvc.Localization.dll
 --reference:C:\Users\epicodus\.nuget\packages\Microsoft.AspNetCore.Mvc.Razor\1.0.0\lib\netstandard1.6\Microsoft.AspNetCore.Mvc.Razor.dll
 --reference:C:\Users\epicodus\.nuget\packages\Microsoft.AspNetCore.Mvc.Razor.Host\1.0.0\lib\netstandard1.6\Microsoft.AspNetCore.Mvc.Razor.Host.dll
 --reference:C:\Users\epicodus\.nuget\packages\Microsoft.AspNetCore.Mvc.TagHelpers\1.0.0\lib\netstandard1.6\Microsoft.AspNetCore.Mvc.TagHelpers.dll
---reference:C:\Users\epicodus\.nuget\packages\Microsoft.AspNetCore.Mvc.ViewFeatures\1.0.0\lib\netstandard1.6\Microsoft.AspNetCore.Mvc.ViewFeatures.dll
+--reference:C:\Users\epicodus\.nuget\packages\Microsoft.AspNetCore.Mvc.ViewFeatures\1.0.1\lib\netstandard1.6\Microsoft.AspNetCore.Mvc.ViewFeatures.dll
 --reference:C:\Users\epicodus\.nuget\packages\Microsoft.AspNetCore.Razor\1.0.0\lib\netstandard1.3\Microsoft.AspNetCore.Razor.dll
 --reference:C:\Users\epicodus\.nuget\packages\Microsoft.AspNetCore.Razor.Runtime\1.0.0\lib\netstandard1.5\Microsoft.AspNetCore.Razor.Runtime.dll
 --reference:C:\Users\epicodus\.nuget\packages\Microsoft.AspNetCore.Routing\1.0.0\lib\netstandard1.3\Microsoft.AspNetCore.Routing.dll
@@ -214,6 +214,10 @@ C:\Users\epicodus\Documents\Visual Studio 2015\Projects\NET-travel-blog\src\Trav
 C:\Users\epicodus\Documents\Visual Studio 2015\Projects\NET-travel-blog\src\TravelBlog\Migrations\20170807210128_Initial.Designer.cs
 C:\Users\epicodus\Documents\Visual Studio 2015\Projects\NET-travel-blog\src\TravelBlog\Migrations\20170814171519_AddSuggestionsTable.cs
 C:\Users\epicodus\Documents\Visual Studio 2015\Projects\NET-travel-blog\src\TravelBlog\Migrations\20170814171519_AddSuggestionsTable.Designer.cs
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\NET-travel-blog\src\TravelBlog\Migrations\20170814182153_BOOL.cs
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\NET-travel-blog\src\TravelBlog\Migrations\20170814182153_BOOL.Designer.cs
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\NET-travel-blog\src\TravelBlog\Migrations\20170814182658_Votes.cs
+C:\Users\epicodus\Documents\Visual Studio 2015\Projects\NET-travel-blog\src\TravelBlog\Migrations\20170814182658_Votes.Designer.cs
 C:\Users\epicodus\Documents\Visual Studio 2015\Projects\NET-travel-blog\src\TravelBlog\Migrations\TravelBlogContextModelSnapshot.cs
 C:\Users\epicodus\Documents\Visual Studio 2015\Projects\NET-travel-blog\src\TravelBlog\Models\ApplicationUser.cs
 C:\Users\epicodus\Documents\Visual Studio 2015\Projects\NET-travel-blog\src\TravelBlog\Models\Comment.cs

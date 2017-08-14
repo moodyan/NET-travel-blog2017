@@ -9,10 +9,11 @@ using Microsoft.AspNetCore.Mvc;
 using Moq;
 using TravelBlog.Models.Repositories;
 using TravelBlog.Tests.ModelTests;
+using Microsoft.EntityFrameworkCore;
 
 namespace TravelBlog.Tests.ControllerTests
 {
-    public class SuggestionsControllerTest
+    public class SuggestionsControllerTest : IDisposable
     {
         Mock<ISuggestionRepository> mock = new Mock<ISuggestionRepository>();
         EFSuggestionRepository db = new EFSuggestionRepository(new TestDbContext());
@@ -20,9 +21,9 @@ namespace TravelBlog.Tests.ControllerTests
         {
             mock.Setup(m => m.Suggestions).Returns(new Suggestion[]
             {
-                new Suggestion { SuggestionId = 1, Author = "Alyssa", Description = "Its.. France", Place = "Fukken France"},
-                new Suggestion { SuggestionId = 2, Author = "David", Description = "Lentils and fukken couscous", Place = "Tunisia"},
-                new Suggestion { SuggestionId = 3, Author = "Guy", Description = "Camping on the coast!", Place = "The Coast"}
+                new Suggestion { SuggestionId = 1, Author = "Alyssa", Description = "Its.. France", Place = "Fukken France", Visited = false, Votes = 0},
+                new Suggestion { SuggestionId = 2, Author = "David", Description = "Lentils and fukken couscous", Place = "Tunisia", Visited = true, Votes = 0},
+                new Suggestion { SuggestionId = 3, Author = "Guy", Description = "Camping on the coast!", Place = "The Coast", Visited = false, Votes = 0}
             }.AsQueryable());
         }
         //[Fact]
@@ -112,6 +113,26 @@ namespace TravelBlog.Tests.ControllerTests
 
             // Assert
             Assert.Contains<Suggestion>(testSuggestion, collection);
+        }
+        [Fact]
+        public void Mock_ConfirmUpvote_Test()
+        {
+            //AAAARRRRANNNNNGGEEE
+            SuggestionsController controller = new SuggestionsController(db);
+            Suggestion testSuggestion = new Suggestion();
+            testSuggestion.Votes = 1;
+
+            // Aaaaaaaaaaaaaaaaaaaaaaaaact
+            db.Save(testSuggestion);
+            db.Upvote(testSuggestion);
+
+            // Aaaaaaaaaaaaaasserrrrt
+            Assert.Equal(2, testSuggestion.Votes);
+        }
+
+        public void Dispose()
+        {
+            db.DeleteAll();
         }
     }
 }

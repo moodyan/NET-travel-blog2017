@@ -11,5 +11,6 @@ namespace TravelBlog.Models.Repositories
         Suggestion Save(Suggestion suggestion);
         Suggestion Edit(Suggestion suggestion);
         void Remove(Suggestion suggestion);
+        void DeleteAll();
     }
 }

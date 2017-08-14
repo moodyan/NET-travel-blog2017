@@ -43,5 +43,19 @@ namespace TravelBlog.Models.Repositories
             db.Suggestions.Remove(suggestion);
             db.SaveChanges();
         }
+
+        public void DeleteAll()
+        {
+            db.RemoveRange(db.Suggestions);
+            db.SaveChanges();
+        }
+
+        public Suggestion Upvote(Suggestion suggestion)
+        {
+            suggestion.Votes += 1;
+            db.Entry(suggestion).State = EntityState.Modified;
+            db.SaveChanges();
+            return suggestion;
+        }
     }
 }

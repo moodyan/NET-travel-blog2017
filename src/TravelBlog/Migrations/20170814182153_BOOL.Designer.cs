@@ -8,9 +8,10 @@ using TravelBlog.Models;
 namespace TravelBlog.Migrations
 {
     [DbContext(typeof(TravelBlogContext))]
-    partial class TravelBlogContextModelSnapshot : ModelSnapshot
+    [Migration("20170814182153_BOOL")]
+    partial class BOOL
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.0-rtm-21431")
@@ -284,8 +285,6 @@ namespace TravelBlog.Migrations
                     b.Property<string>("Place");
 
                     b.Property<bool>("Visited");
-
-                    b.Property<int>("Votes");
 
                     b.HasKey("SuggestionId");
 

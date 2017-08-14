@@ -19,7 +19,8 @@
       "version": "1.0.0-preview2-final",
       "type": "build"
     },
-    "Microsoft.AspNetCore.Mvc.Core": "1.0.1"
+    "Microsoft.AspNetCore.Mvc.Core": "1.0.1",
+    "Microsoft.AspNetCore.Mvc.ViewFeatures": "1.0.1"
   },
 
 
