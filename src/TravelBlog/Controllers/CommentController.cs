@@ -37,7 +37,7 @@ namespace TravelBlog.Controllers
             var userId = this.User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             var currentUser = await _userManager.FindByIdAsync(userId);
             comment.User = currentUser;
-            
+
             comment.Experience = _db.Experiences.FirstOrDefault(Experiences => Experiences.ExperienceId == id);
             _db.Comments.Add(comment);
             _db.Database.ExecuteSqlCommand("SET IDENTITY_INSERT Comments ON");
@@ -46,6 +46,22 @@ namespace TravelBlog.Controllers
 
             return RedirectToAction("Details", "Experience", new { id = id });
         }
+
+        //[HttpPost]
+        //public IActionResult CreateComment(Comment comment, string userId, int id)
+        //{
+
+        //    comment.User.Id =userId;
+
+        //    comment.Experience = _db.Experiences.FirstOrDefault(Experiences => Experiences.ExperienceId == id);
+        //    _db.Comments.Add(comment);
+        //    _db.Database.ExecuteSqlCommand("SET IDENTITY_INSERT Comments ON");
+        //    _db.SaveChanges();
+        //    _db.Database.ExecuteSqlCommand("SET IDENTITY_INSERT Comments OFF");
+
+        //    return RedirectToAction("Details", "Experience", new { id = id });
+        //}
+
 
     }
 }

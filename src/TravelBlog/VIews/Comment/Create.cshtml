@@ -7,19 +7,24 @@
                 url: '@Url.Action("Create", "Comment")',
                 type: 'POST',
                 dataType: 'json',
-                data: $(this).serialize()
+                data: $(this).serialize(),
             });
         });
     });
 </script>
 <h2>Add a new Comment</h2>
 <hr />
-@using (Html.BeginForm())
-{
+    @using (Html.BeginForm())
+    {
+        @Html.EditorFor(model => model.CommentBody)
+        <input type="submit" value="Create" />
+    }
 
-    @Html.LabelFor(model => model.CommentBody)
-    @Html.EditorFor(model => model.CommentBody)
+@*<form action="CreateComment" class="new-destination">
+    <textarea type="text" name="CommentBody" />
+    <button type="submit">SUBMIT</button>
+</form>*@
 
-    <input type="submit" value="Create" />
-}
-@Html.ActionLink("Back to Experience", "Index", "Experience")
+
+
+

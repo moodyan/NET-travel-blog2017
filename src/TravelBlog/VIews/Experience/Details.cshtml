@@ -10,7 +10,7 @@
                 type: 'GET',
                 dataType: 'html',
                 url: '@Url.Action("Create", "Comment")',
-                data: { id : $(this).data('id')},
+                data: { id: $(this).data('id')},
                 success: function (result) {
                     $('#comment-form').html(result);
                 }
