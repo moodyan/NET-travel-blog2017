@@ -1,5 +1,21 @@
 ﻿@model TravelBlog.Models.Comment
-
+<script>
+    $(document).ready(function () {
+        $(form).submit(function (event) {
+            event.preventDefault();
+            $.ajax({
+                url: '@Url.Action("Create", "Comment")',
+                type: 'POST',
+                dataType: 'json',
+                data: $(this).serialize()
+                //success: function (result) {
+                //    var resultMessage = 'You\'ve added a new destination to the database!<br>Id: ' + result.id + '<br>City: ' + result.city + '<br>Country: ' + result.country;
+                //    $('#result6').html(resultMessage);
+                //}
+            });
+        });
+    });
+</script>
 <h2>Add a new Comment</h2>
 <hr />
 @using (Html.BeginForm())
