@@ -1,5 +1,5 @@
---temp-output:C:\Users\epicodus\Documents\Visual Studio 2015\Projects\NET-travel-blog\src\TravelBlog\obj\Debug\netcoreapp1.0\
---out:C:\Users\epicodus\Documents\Visual Studio 2015\Projects\NET-travel-blog\src\TravelBlog\bin\Debug\netcoreapp1.0\TravelBlog.dll
+--temp-output:C:\Users\epicodus\Desktop\NET-travel-blog\src\TravelBlog\obj\Debug\netcoreapp1.0\
+--out:C:\Users\epicodus\Desktop\NET-travel-blog\src\TravelBlog\bin\Debug\netcoreapp1.0\TravelBlog.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -183,38 +183,38 @@
 --reference:C:\Users\epicodus\.nuget\packages\System.Threading.Timer\4.0.1\ref\netstandard1.2\System.Threading.Timer.dll
 --reference:C:\Users\epicodus\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\epicodus\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll
---resource:"C:\Users\epicodus\Documents\Visual Studio 2015\Projects\NET-travel-blog\src\TravelBlog\obj\Debug\netcoreapp1.0\TravelBlogdotnet-compile.deps.json",TravelBlog.deps.json
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\NET-travel-blog\src\TravelBlog\Program.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\NET-travel-blog\src\TravelBlog\Startup.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\NET-travel-blog\src\TravelBlog\Controllers\AccountController.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\NET-travel-blog\src\TravelBlog\Controllers\CommentController.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\NET-travel-blog\src\TravelBlog\Controllers\ExperienceController.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\NET-travel-blog\src\TravelBlog\Controllers\HomeController.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\NET-travel-blog\src\TravelBlog\Controllers\LocationController.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\NET-travel-blog\src\TravelBlog\Controllers\RoleController.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\NET-travel-blog\src\TravelBlog\Controllers\SuggestionsController.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\NET-travel-blog\src\TravelBlog\Migrations\20170807210128_Initial.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\NET-travel-blog\src\TravelBlog\Migrations\20170807210128_Initial.Designer.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\NET-travel-blog\src\TravelBlog\Migrations\20170814171519_AddSuggestionsTable.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\NET-travel-blog\src\TravelBlog\Migrations\20170814171519_AddSuggestionsTable.Designer.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\NET-travel-blog\src\TravelBlog\Migrations\20170814182153_BOOL.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\NET-travel-blog\src\TravelBlog\Migrations\20170814182153_BOOL.Designer.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\NET-travel-blog\src\TravelBlog\Migrations\20170814182658_Votes.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\NET-travel-blog\src\TravelBlog\Migrations\20170814182658_Votes.Designer.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\NET-travel-blog\src\TravelBlog\Migrations\20170814215650_WTFWKJTSL.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\NET-travel-blog\src\TravelBlog\Migrations\20170814215650_WTFWKJTSL.Designer.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\NET-travel-blog\src\TravelBlog\Migrations\TravelBlogContextModelSnapshot.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\NET-travel-blog\src\TravelBlog\Models\ApplicationUser.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\NET-travel-blog\src\TravelBlog\Models\Comment.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\NET-travel-blog\src\TravelBlog\Models\Experience.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\NET-travel-blog\src\TravelBlog\Models\Location.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\NET-travel-blog\src\TravelBlog\Models\Person.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\NET-travel-blog\src\TravelBlog\Models\Region.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\NET-travel-blog\src\TravelBlog\Models\Role.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\NET-travel-blog\src\TravelBlog\Models\Suggestion.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\NET-travel-blog\src\TravelBlog\Models\TravelBlogContext.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\NET-travel-blog\src\TravelBlog\Models\Repositories\EFSuggestionRepository.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\NET-travel-blog\src\TravelBlog\Models\Repositories\ISuggestionRepository.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\NET-travel-blog\src\TravelBlog\node_modules\node-gyp\lib\Find-VS2017.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\NET-travel-blog\src\TravelBlog\ViewModels\LoginViewModel.cs
-C:\Users\epicodus\Documents\Visual Studio 2015\Projects\NET-travel-blog\src\TravelBlog\ViewModels\RegisterViewModel.cs
+--resource:"C:\Users\epicodus\Desktop\NET-travel-blog\src\TravelBlog\obj\Debug\netcoreapp1.0\TravelBlogdotnet-compile.deps.json",TravelBlog.deps.json
+C:\Users\epicodus\Desktop\NET-travel-blog\src\TravelBlog\Program.cs
+C:\Users\epicodus\Desktop\NET-travel-blog\src\TravelBlog\Startup.cs
+C:\Users\epicodus\Desktop\NET-travel-blog\src\TravelBlog\Controllers\AccountController.cs
+C:\Users\epicodus\Desktop\NET-travel-blog\src\TravelBlog\Controllers\CommentController.cs
+C:\Users\epicodus\Desktop\NET-travel-blog\src\TravelBlog\Controllers\ExperienceController.cs
+C:\Users\epicodus\Desktop\NET-travel-blog\src\TravelBlog\Controllers\HomeController.cs
+C:\Users\epicodus\Desktop\NET-travel-blog\src\TravelBlog\Controllers\LocationController.cs
+C:\Users\epicodus\Desktop\NET-travel-blog\src\TravelBlog\Controllers\RoleController.cs
+C:\Users\epicodus\Desktop\NET-travel-blog\src\TravelBlog\Controllers\SuggestionsController.cs
+C:\Users\epicodus\Desktop\NET-travel-blog\src\TravelBlog\Migrations\20170807210128_Initial.cs
+C:\Users\epicodus\Desktop\NET-travel-blog\src\TravelBlog\Migrations\20170807210128_Initial.Designer.cs
+C:\Users\epicodus\Desktop\NET-travel-blog\src\TravelBlog\Migrations\20170814171519_AddSuggestionsTable.cs
+C:\Users\epicodus\Desktop\NET-travel-blog\src\TravelBlog\Migrations\20170814171519_AddSuggestionsTable.Designer.cs
+C:\Users\epicodus\Desktop\NET-travel-blog\src\TravelBlog\Migrations\20170814182153_BOOL.cs
+C:\Users\epicodus\Desktop\NET-travel-blog\src\TravelBlog\Migrations\20170814182153_BOOL.Designer.cs
+C:\Users\epicodus\Desktop\NET-travel-blog\src\TravelBlog\Migrations\20170814182658_Votes.cs
+C:\Users\epicodus\Desktop\NET-travel-blog\src\TravelBlog\Migrations\20170814182658_Votes.Designer.cs
+C:\Users\epicodus\Desktop\NET-travel-blog\src\TravelBlog\Migrations\20170814215650_WTFWKJTSL.cs
+C:\Users\epicodus\Desktop\NET-travel-blog\src\TravelBlog\Migrations\20170814215650_WTFWKJTSL.Designer.cs
+C:\Users\epicodus\Desktop\NET-travel-blog\src\TravelBlog\Migrations\TravelBlogContextModelSnapshot.cs
+C:\Users\epicodus\Desktop\NET-travel-blog\src\TravelBlog\Models\ApplicationUser.cs
+C:\Users\epicodus\Desktop\NET-travel-blog\src\TravelBlog\Models\Comment.cs
+C:\Users\epicodus\Desktop\NET-travel-blog\src\TravelBlog\Models\Experience.cs
+C:\Users\epicodus\Desktop\NET-travel-blog\src\TravelBlog\Models\Location.cs
+C:\Users\epicodus\Desktop\NET-travel-blog\src\TravelBlog\Models\Person.cs
+C:\Users\epicodus\Desktop\NET-travel-blog\src\TravelBlog\Models\Region.cs
+C:\Users\epicodus\Desktop\NET-travel-blog\src\TravelBlog\Models\Role.cs
+C:\Users\epicodus\Desktop\NET-travel-blog\src\TravelBlog\Models\Suggestion.cs
+C:\Users\epicodus\Desktop\NET-travel-blog\src\TravelBlog\Models\TravelBlogContext.cs
+C:\Users\epicodus\Desktop\NET-travel-blog\src\TravelBlog\Models\Repositories\EFSuggestionRepository.cs
+C:\Users\epicodus\Desktop\NET-travel-blog\src\TravelBlog\Models\Repositories\ISuggestionRepository.cs
+C:\Users\epicodus\Desktop\NET-travel-blog\src\TravelBlog\node_modules\node-gyp\lib\Find-VS2017.cs
+C:\Users\epicodus\Desktop\NET-travel-blog\src\TravelBlog\ViewModels\LoginViewModel.cs
+C:\Users\epicodus\Desktop\NET-travel-blog\src\TravelBlog\ViewModels\RegisterViewModel.cs

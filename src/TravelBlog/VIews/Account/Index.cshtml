@@ -2,7 +2,20 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.register').click(function () {
+            $.ajax({
+                type: 'GET',
+                dataType: 'html',
+                url: '@Url.Action("Register", "Account")',
+                success: function (result) {
+                    $('#register-form').html(result);
+                }
+            });
+        });
+    });
+</script>
 @using System.Security.Claims
 
 <h2>Authentication with Identity</h2>
@@ -19,6 +32,11 @@
 }
 else
 {
-    <p>@Html.ActionLink("Register", "Register")</p>
+    <p>@Html.ActionLink("Register", "Register", new { @class = "register" })</p>
+
+
+    <h2 class="register">REGISTER</h2>
+    <div id="register-form"></div>
+
     <p>@Html.ActionLink("Log in", "Login")</p>
 }

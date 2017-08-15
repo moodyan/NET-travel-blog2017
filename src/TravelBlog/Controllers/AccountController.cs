@@ -80,5 +80,10 @@ namespace TravelBlog.Controllers
             return RedirectToAction("Index");
         }
 
+        public IActionResult HelloAjax()
+        {
+            return Content("Hello from the controller!", "text/plain");
+        }
+
     }
 }

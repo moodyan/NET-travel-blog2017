@@ -1,15 +1,17 @@
 ﻿<!DOCTYPE html>
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <script type="text/javascript" src="/scripts/jquery-3.2.1.js"></script>
+    @*<script type="text/javascript" src="/scripts/jquery-3.2.1.js"></script>*@
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    
     <link rel="stylesheet" type="text/css" href="~/styles/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="~/styles/Styles.css" />
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
 </head>
 <body>
-    
+
 
     <div class="jumbotron">
         <nav class="navbar navbar-default" role="navigation">
@@ -23,7 +25,6 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li>@Html.ActionLink("Experiences", "Index", "Experience", null, new { @class = "nav navbar-nav" })</li>
-                        <li>@Html.ActionLink("Regions", "Index", "Regions", null, new { @class = "nav navbar-nav" })</li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
@@ -34,6 +35,9 @@
     </div>
     <div class="container">
         @RenderBody()
+    </div>
+    <div class="footer">
+        <div>@Html.ActionLink("ADMIN", "Index", "Account")</div>
     </div>
 </body>
 </html>

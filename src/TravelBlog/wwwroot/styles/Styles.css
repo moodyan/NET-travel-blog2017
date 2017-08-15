@@ -1,4 +1,14 @@
-﻿.jumbotron{
+﻿html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+.jumbotron{
     background: url("https://inst.eecs.berkeley.edu/~cs194-26/fa14/upload/files/proj3/cs194-di/proj3_sutardja_anthony/imgs/earth_road_joined/road.png");
     background-size: cover;
     background-position: center;
@@ -64,3 +74,15 @@
   .navbar-default {
       background-color: transparent;
   }
+
+.footer {
+    display: flex;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    height: 80px;
+    width: 100%;
+    border: 1px solid black;
+}
