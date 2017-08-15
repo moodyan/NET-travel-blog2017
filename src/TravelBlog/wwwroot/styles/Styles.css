@@ -66,9 +66,7 @@
   }
 
   .navbar {
-    
       margin-top: 0;
-      
   }
 
   .navbar-default {
@@ -84,5 +82,17 @@
     padding: 20px;
     height: 80px;
     width: 100%;
-    border: 1px solid black;
+    border: 1px solid grey;
+    margin-top: 30px;
+    background-color: lightgrey;
+}
+#render-body {
+    margin: 0 auto;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding-bottom: 10rem;
+    min-height: 100%;
 }

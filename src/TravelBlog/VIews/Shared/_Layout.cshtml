@@ -2,7 +2,6 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    @*<script type="text/javascript" src="/scripts/jquery-3.2.1.js"></script>*@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     
     <link rel="stylesheet" type="text/css" href="~/styles/bootstrap.css" />
@@ -11,17 +10,12 @@
     <title>@ViewBag.Title</title>
 </head>
 <body>
-
-
     <div class="jumbotron">
         <nav class="navbar navbar-default" role="navigation">
             <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
                     @Html.ActionLink("Home", "Index", "Location", null, new { @class = "navbar-brand" })
                 </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li>@Html.ActionLink("Experiences", "Index", "Experience", null, new { @class = "nav navbar-nav" })</li>
@@ -33,7 +27,7 @@
             <h2>TRAVEL BLOG</h2>
         </div>
     </div>
-    <div class="container">
+    <div class="container" id="render-body">
         @RenderBody()
     </div>
     <div class="footer">

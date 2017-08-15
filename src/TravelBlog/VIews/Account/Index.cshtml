@@ -14,11 +14,21 @@
                 }
             });
         });
+        $('.login').click(function () {
+            $.ajax({
+                type: 'GET',
+                dataType: 'html',
+                url: '@Url.Action("Login", "Account")',
+                success: function (result) {
+                    $('#login-form').html(result);
+                }
+            });
+        });
     });
 </script>
 @using System.Security.Claims
 
-<h2>Authentication with Identity</h2>
+<h2>LOG IN OR REGISTER</h2>
 <hr />
 @if (User.Identity.IsAuthenticated)
 {
@@ -32,11 +42,9 @@
 }
 else
 {
-    <p>@Html.ActionLink("Register", "Register", new { @class = "register" })</p>
-
-
-    <h2 class="register">REGISTER</h2>
+    <button class="register btn">REGISTER</button>
     <div id="register-form"></div>
-
-    <p>@Html.ActionLink("Log in", "Login")</p>
+    <br />
+    <button class="login btn">LOG IN</button>
+    <div id="login-form"></div>
 }

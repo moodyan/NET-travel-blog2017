@@ -3,15 +3,29 @@
     ViewData["Title"] = @Html.DisplayFor(model => model.Title);
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.comment').click(function () {
+            $.ajax({
+                type: 'GET',
+                dataType: 'html',
+                url: '@Url.Action("Create", "Comment")',
+                data: { id : $(this).data('id')},
+                success: function (result) {
+                    $('#comment-form').html(result);
+                }
+            });
+        });
+    });
+</script>
 <div class="container">
     <h2>@Html.DisplayFor(model => model.Title)</h2>
     <hr />
     <p>@Html.DisplayNameFor(model => model.Drink): @Html.DisplayFor(model => model.Drink)</p>
     <p>@Html.DisplayNameFor(model => model.Eat): @Html.DisplayFor(model => model.Eat)</p>
     <p>@Html.DisplayNameFor(model => model.See): @Html.DisplayFor(model => model.See)</p>
-    <br />  
-    <p>@Html.ActionLink("View All " + (string)ViewBag.Location + " Experiences", "Details", "Location", new {id = ViewBag.LocationId })</p>
+    <br />
+    <p>@Html.ActionLink("View All " + (string)ViewBag.Location + " Experiences", "Details", "Location", new { id = ViewBag.LocationId })</p>
 </div>
 
 <br />
@@ -22,4 +36,5 @@
 
 }
 <br />
-<button>@Html.ActionLink("Add Comment", "Create", "Comment", new { id = Model.ExperienceId })</button>
+<button class="comment" data-id="@Model.ExperienceId">Add Comment</button>
+<div id="comment-form"></div>
