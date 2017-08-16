@@ -1,0 +1,9 @@
+C:\Users\alyssamoody\Desktop\NET-travel-blog\src\TravelBlog\bin\Debug\netcoreapp1.0\TravelBlog.deps.json
+C:\Users\alyssamoody\Desktop\NET-travel-blog\src\TravelBlog\bin\Debug\netcoreapp1.0\TravelBlog.runtimeconfig.json
+C:\Users\alyssamoody\Desktop\NET-travel-blog\src\TravelBlog\bin\Debug\netcoreapp1.0\TravelBlog.runtimeconfig.dev.json
+C:\Users\alyssamoody\Desktop\NET-travel-blog\src\TravelBlog\bin\Debug\netcoreapp1.0\TravelBlog.dll
+C:\Users\alyssamoody\Desktop\NET-travel-blog\src\TravelBlog\bin\Debug\netcoreapp1.0\TravelBlog.pdb
+C:\Users\alyssamoody\Desktop\NET-travel-blog\src\TravelBlog\obj\Debug\netcoreapp1.0\TravelBlog.AssemblyInfo.cs
+C:\Users\alyssamoody\Desktop\NET-travel-blog\src\TravelBlog\obj\Debug\netcoreapp1.0\TravelBlog.dll
+C:\Users\alyssamoody\Desktop\NET-travel-blog\src\TravelBlog\obj\Debug\netcoreapp1.0\TravelBlog.pdb
+C:\Users\alyssamoody\Desktop\NET-travel-blog\src\TravelBlog\obj\Debug\netcoreapp1.0\TravelBlog.csprojResolveAssemblyReference.cache

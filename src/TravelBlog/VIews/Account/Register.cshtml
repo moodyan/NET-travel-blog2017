@@ -5,7 +5,7 @@
 
 <h2>Register a new user</h2>
 <hr />
-@using (Html.BeginForm("Register", "Account", FormMethod.Post))
+@using (Html.BeginForm("RegisterUser", "Account", FormMethod.Post))
 {
     @Html.LabelFor(m => m.Email)
     @Html.TextBoxFor(m => m.Email)

@@ -40,17 +40,50 @@ namespace TravelBlog.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Register(RegisterViewModel model)
+        public async Task<IActionResult> RegisterUser(RegisterViewModel model)
         {
-            var user = new ApplicationUser { UserName = model.Email };
+            ApplicationUser user = new ApplicationUser { UserName = model.Email, Email = model.Email };
             IdentityResult result = await _userManager.CreateAsync(user, model.Password);
             if (result.Succeeded)
             {
+                await _userManager.AddToRoleAsync(user, "user");
+                return await LoginOnRegister(user, model.Password);
+            }
+            else
+            {
+                return View("Index", "Account");
+            }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> RegisterAdmin(RegisterViewModel model, string adminPassword)
+        {
+            var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+            IdentityResult result = await _userManager.CreateAsync(user, model.Password);
+            if (result.Succeeded && adminPassword == "Admin123!")
+            {
+                await _userManager.AddToRoleAsync(user, "admin");
+                return await LoginOnRegister(user, model.Password);
+            }
+            else
+            {
+                return View("Index", "Account");
+            }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> LoginOnRegister(ApplicationUser user, string password)
+        {
+
+            Microsoft.AspNetCore.Identity.SignInResult result = await _signInManager.PasswordSignInAsync(user.Email, password, isPersistent: true, lockoutOnFailure: false);
+            if (result.Succeeded)
+            {
+
                 return RedirectToAction("Index", "Home");
             }
             else
             {
-                return View();
+                return RedirectToAction("Register");
             }
         }
 
